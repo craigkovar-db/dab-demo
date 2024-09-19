@@ -16,6 +16,7 @@ targets:
     mode: development
     default: true
     workspace:
+      profile: azure-dev
       host: https://adb-984752964297111.11.azuredatabricks.net
 
   ## Optionally, there could be a 'staging' target here.
@@ -31,10 +32,11 @@ targets:
     # Doing so enables strict verification of the settings below.
     mode: production
     workspace:
+      profile: aws-prod
       host: https://e2-demo-field-eng.cloud.databricks.com
       # We always use /Users/craig.kovar@databricks.com for all resources to make sure we only have a single copy.
       # If this path results in an error, please make sure you have a recent version of the CLI installed.
-      root_path: /Users/craig.kovar@databricks.com/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Users/craig.kovar@databricks.com/.bundle/${bundle.name}/test/${bundle.target}
     run_as:
       # This runs as craig.kovar@databricks.com in production. We could also use a service principal here,
       # see https://docs.databricks.com/dev-tools/bundles/permissions.html.

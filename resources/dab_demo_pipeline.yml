@@ -2,7 +2,7 @@
 resources:
   pipelines:
     dab_demo_pipeline:
-      name: dab_demo_pipeline
+      name: ckovar_dab_demo_pipeline
       target: dab_demo_${bundle.environment}
       libraries:
         - notebook:

@@ -18,6 +18,7 @@ targets:
     workspace:
       profile: azure-dev
       host: https://adb-984752964297111.11.azuredatabricks.net
+      file_path: /Workspace/Users/${workspace.current_user.userName}/dnb/inherit
 
   ## Optionally, there could be a 'staging' target here.
   ## (See Databricks docs on CI/CD at https://docs.databricks.com/dev-tools/bundles/ci-cd.html.)
